@@ -48,6 +48,7 @@ body {
 }
 
 #playlist-content {
+	display: block;
 	height: 8rem;
 	overflow: auto;
 }
@@ -56,3 +57,9 @@ body {
 	height: 3rem;
 	background: white;
 }
+
+/* @media screen and (max-height: 400px) {
+	#playlist-content {
+		display: none;
+	}
+} */
