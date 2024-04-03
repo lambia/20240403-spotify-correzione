@@ -1,3 +1,8 @@
+:root {
+	--toolbar-height: 5rem;
+	--sidebar-width: 12rem;
+}
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -7,4 +12,47 @@
 body {
 	background-color: #222;
 	font-family: sans-serif;
+}
+
+#app-wrapper {
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#app-sidebar,
+#app-main {
+	height: calc(100% - var(--toolbar-height));
+}
+
+#app-sidebar {
+	background-color: antiquewhite;
+	width: var(--sidebar-width);
+	overflow: auto;
+}
+
+#app-main {
+	background-color: crimson;
+	width: calc( 100% - var(--sidebar-width) );
+}
+
+#app-toolbar {
+	background-color: orange;
+	height: var(--toolbar-height);
+	width: 100%;
+}
+
+#sidebar-content {
+	height: calc(100% - 3rem);
+	overflow: auto;
+}
+
+#playlist-content {
+	height: 8rem;
+	overflow: auto;
+}
+
+#sidebar-user {
+	height: 3rem;
+	background: white;
 }
